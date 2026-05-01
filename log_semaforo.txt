@@ -1,0 +1,114 @@
+[001] Inicio | pool=4 workers=8 ciclos=3
+[002] W1 -> iniciado
+[003] W1 -> bloqueado esperando recurso
+[004] W3 -> iniciado
+[005] W3 -> bloqueado esperando recurso
+[006] W3 -> recurso adquirido (quedan 2 libres)
+[007] W3 [ciclo 1] -> trabajando 141ms...
+[008] W7 -> iniciado
+[009] W7 -> bloqueado esperando recurso
+[010] W7 -> recurso adquirido (quedan 1 libres)
+[011] W7 [ciclo 1] -> trabajando 141ms...
+[012] W4 -> iniciado
+[013] W4 -> bloqueado esperando recurso
+[014] W4 -> recurso adquirido (quedan 0 libres)
+[015] W4 [ciclo 1] -> trabajando 141ms...
+[016] W2 -> iniciado
+[017] W2 -> bloqueado esperando recurso
+[018] W5 -> iniciado
+[019] W5 -> bloqueado esperando recurso
+[020] W8 -> iniciado
+[021] W8 -> bloqueado esperando recurso
+[022] W6 -> iniciado
+[023] W6 -> bloqueado esperando recurso
+[024] W1 -> recurso adquirido (quedan 3 libres)
+[025] W1 [ciclo 1] -> trabajando 141ms...
+[026] W3 -> recurso liberado  (quedan -3 libres)
+[027] W3 -> bloqueado esperando recurso
+[028] W5 -> recurso adquirido (quedan -2 libres)
+[029] W5 [ciclo 1] -> trabajando 141ms...
+[030] W7 -> recurso liberado  (quedan -2 libres)
+[031] W7 -> bloqueado esperando recurso
+[032] W2 -> recurso adquirido (quedan -2 libres)
+[033] W2 [ciclo 1] -> trabajando 141ms...
+[034] W8 -> recurso adquirido (quedan -2 libres)
+[035] W8 [ciclo 1] -> trabajando 141ms...
+[036] W4 -> recurso liberado  (quedan -2 libres)
+[037] W4 -> bloqueado esperando recurso
+[038] W1 -> recurso liberado  (quedan -3 libres)
+[039] W1 -> bloqueado esperando recurso
+[040] W6 -> recurso adquirido (quedan -3 libres)
+[041] W6 [ciclo 1] -> trabajando 141ms...
+[042] W5 -> recurso liberado  (quedan -3 libres)
+[043] W5 -> bloqueado esperando recurso
+[044] W3 -> recurso adquirido (quedan -3 libres)
+[045] W3 [ciclo 2] -> trabajando 567ms...
+[046] W7 -> recurso adquirido (quedan -3 libres)
+[047] W7 [ciclo 2] -> trabajando 567ms...
+[048] W8 -> recurso liberado  (quedan -2 libres)
+[049] W4 -> recurso adquirido (quedan -2 libres)
+[050] W4 [ciclo 2] -> trabajando 567ms...
+[051] W8 -> bloqueado esperando recurso
+[052] W2 -> recurso liberado  (quedan -3 libres)
+[053] W2 -> bloqueado esperando recurso
+[054] W6 -> recurso liberado  (quedan -3 libres)
+[055] W6 -> bloqueado esperando recurso
+[056] W1 -> recurso adquirido (quedan -3 libres)
+[057] W1 [ciclo 2] -> trabajando 567ms...
+[058] W3 -> recurso liberado  (quedan -3 libres)
+[059] W3 -> bloqueado esperando recurso
+[060] W5 -> recurso adquirido (quedan -3 libres)
+[061] W5 [ciclo 2] -> trabajando 567ms...
+[062] W7 -> recurso liberado  (quedan -3 libres)
+[063] W7 -> bloqueado esperando recurso
+[064] W8 -> recurso adquirido (quedan -3 libres)
+[065] W8 [ciclo 2] -> trabajando 567ms...
+[066] W2 -> recurso adquirido (quedan -3 libres)
+[067] W2 [ciclo 2] -> trabajando 567ms...
+[068] W4 -> recurso liberado  (quedan -3 libres)
+[069] W4 -> bloqueado esperando recurso
+[070] W6 -> recurso adquirido (quedan -3 libres)
+[071] W6 [ciclo 2] -> trabajando 567ms...
+[072] W1 -> recurso liberado  (quedan -3 libres)
+[073] W1 -> bloqueado esperando recurso
+[074] W5 -> recurso liberado  (quedan -3 libres)
+[075] W5 -> bloqueado esperando recurso
+[076] W3 -> recurso adquirido (quedan -3 libres)
+[077] W3 [ciclo 3] -> trabajando 434ms...
+[078] W8 -> recurso liberado  (quedan -3 libres)
+[079] W8 -> bloqueado esperando recurso
+[080] W2 -> recurso liberado  (quedan -2 libres)
+[081] W2 -> bloqueado esperando recurso
+[082] W7 -> recurso adquirido (quedan -3 libres)
+[083] W7 [ciclo 3] -> trabajando 434ms...
+[084] W6 -> recurso liberado  (quedan -2 libres)
+[085] W6 -> bloqueado esperando recurso
+[086] W4 -> recurso adquirido (quedan -2 libres)
+[087] W4 [ciclo 3] -> trabajando 434ms...
+[088] W1 -> recurso adquirido (quedan -2 libres)
+[089] W1 [ciclo 3] -> trabajando 434ms...
+[090] W3 -> recurso liberado  (quedan -3 libres)
+[091] W3 -> terminado
+[092] W5 -> recurso adquirido (quedan -3 libres)
+[093] W5 [ciclo 3] -> trabajando 434ms...
+[094] W8 -> recurso adquirido (quedan -2 libres)
+[095] W8 [ciclo 3] -> trabajando 434ms...
+[096] W7 -> recurso liberado  (quedan -2 libres)
+[097] W7 -> terminado
+[098] W4 -> recurso liberado  (quedan -1 libres)
+[099] W4 -> terminado
+[100] W2 -> recurso adquirido (quedan -1 libres)
+[101] W2 [ciclo 3] -> trabajando 434ms...
+[102] W1 -> recurso liberado  (quedan 0 libres)
+[103] W1 -> terminado
+[104] W6 -> recurso adquirido (quedan 0 libres)
+[105] W6 [ciclo 3] -> trabajando 434ms...
+[106] W5 -> recurso liberado  (quedan 1 libres)
+[107] W5 -> terminado
+[108] W8 -> recurso liberado  (quedan 2 libres)
+[109] W8 -> terminado
+[110] W2 -> recurso liberado  (quedan 3 libres)
+[111] W2 -> terminado
+[112] W6 -> recurso liberado  (quedan 4 libres)
+[113] W6 -> terminado
+[114] Fin del programa

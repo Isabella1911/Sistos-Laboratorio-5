@@ -1,0 +1,162 @@
+001 | CONFIG | capacidad=8 workers=5 ciclos=4 max_pedido=3
+002 | W1 | iniciado
+003 | W1 | ciclo 1 | pide 3 recurso(s)
+004 | W3 | iniciado
+005 | W3 | ciclo 1 | pide 3 recurso(s)
+006 | W5 | iniciado
+007 | W5 | ciclo 1 | pide 3 recurso(s)
+008 | W1 | decrease(3) | entrando al monitor | stock=8
+009 | W4 | iniciado
+010 | W4 | ciclo 1 | pide 3 recurso(s)
+011 | W1 | decrease(3) | OK -> stock restante=5
+012 | W2 | iniciado
+013 | W2 | ciclo 1 | pide 3 recurso(s)
+014 | W3 | decrease(3) | entrando al monitor | stock=5
+015 | W3 | decrease(3) | OK -> stock restante=2
+016 | W5 | decrease(3) | entrando al monitor | stock=2
+017 | W5 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+018 | W4 | decrease(3) | entrando al monitor | stock=2
+019 | W4 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+020 | W2 | decrease(3) | entrando al monitor | stock=2
+021 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+022 | W1 | ciclo 1 | devuelve 3 recurso(s)
+023 | W1 | increase(3) | stock ahora=5 -> broadcast
+024 | W5 | decrease(3) | despertado -> stock=5
+025 | W5 | decrease(3) | OK -> stock restante=2
+026 | W3 | ciclo 1 | devuelve 3 recurso(s)
+027 | W1 | ciclo 2 | pide 2 recurso(s)
+028 | W4 | decrease(3) | despertado -> stock=2
+029 | W4 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+030 | W2 | decrease(3) | despertado -> stock=2
+031 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+032 | W3 | increase(3) | stock ahora=5 -> broadcast
+033 | W4 | decrease(3) | despertado -> stock=5
+034 | W4 | decrease(3) | OK -> stock restante=2
+035 | W2 | decrease(3) | despertado -> stock=2
+036 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+037 | W3 | ciclo 2 | pide 2 recurso(s)
+038 | W1 | decrease(2) | entrando al monitor | stock=2
+039 | W1 | decrease(2) | OK -> stock restante=0
+040 | W3 | decrease(2) | entrando al monitor | stock=0
+041 | W3 | decrease(2) | SIN STOCK (hay 0) -> cond_wait
+042 | W1 | ciclo 2 | devuelve 2 recurso(s)
+043 | W1 | increase(2) | stock ahora=2 -> broadcast
+044 | W1 | ciclo 3 | pide 3 recurso(s)
+045 | W3 | decrease(2) | despertado -> stock=2
+046 | W3 | decrease(2) | OK -> stock restante=0
+047 | W2 | decrease(3) | despertado -> stock=0
+048 | W2 | decrease(3) | SIN STOCK (hay 0) -> cond_wait
+049 | W1 | decrease(3) | entrando al monitor | stock=0
+050 | W1 | decrease(3) | SIN STOCK (hay 0) -> cond_wait
+051 | W3 | ciclo 2 | devuelve 2 recurso(s)
+052 | W3 | increase(2) | stock ahora=2 -> broadcast
+053 | W3 | ciclo 3 | pide 3 recurso(s)
+054 | W1 | decrease(3) | despertado -> stock=2
+055 | W1 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+056 | W2 | decrease(3) | despertado -> stock=2
+057 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+058 | W3 | decrease(3) | entrando al monitor | stock=2
+059 | W3 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+060 | W5 | ciclo 1 | devuelve 3 recurso(s)
+061 | W5 | increase(3) | stock ahora=5 -> broadcast
+062 | W5 | ciclo 2 | pide 2 recurso(s)
+063 | W3 | decrease(3) | despertado -> stock=5
+064 | W3 | decrease(3) | OK -> stock restante=2
+065 | W2 | decrease(3) | despertado -> stock=2
+066 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+067 | W1 | decrease(3) | despertado -> stock=2
+068 | W1 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+069 | W4 | ciclo 1 | devuelve 3 recurso(s)
+070 | W5 | decrease(2) | entrando al monitor | stock=2
+071 | W5 | decrease(2) | OK -> stock restante=0
+072 | W4 | increase(3) | stock ahora=3 -> broadcast
+073 | W4 | ciclo 2 | pide 2 recurso(s)
+074 | W1 | decrease(3) | despertado -> stock=3
+075 | W1 | decrease(3) | OK -> stock restante=0
+076 | W2 | decrease(3) | despertado -> stock=0
+077 | W2 | decrease(3) | SIN STOCK (hay 0) -> cond_wait
+078 | W4 | decrease(2) | entrando al monitor | stock=0
+079 | W4 | decrease(2) | SIN STOCK (hay 0) -> cond_wait
+080 | W5 | ciclo 2 | devuelve 2 recurso(s)
+081 | W5 | increase(2) | stock ahora=2 -> broadcast
+082 | W5 | ciclo 3 | pide 3 recurso(s)
+083 | W4 | decrease(2) | despertado -> stock=2
+084 | W4 | decrease(2) | OK -> stock restante=0
+085 | W2 | decrease(3) | despertado -> stock=0
+086 | W2 | decrease(3) | SIN STOCK (hay 0) -> cond_wait
+087 | W5 | decrease(3) | entrando al monitor | stock=0
+088 | W5 | decrease(3) | SIN STOCK (hay 0) -> cond_wait
+089 | W4 | ciclo 2 | devuelve 2 recurso(s)
+090 | W4 | increase(2) | stock ahora=2 -> broadcast
+091 | W4 | ciclo 3 | pide 3 recurso(s)
+092 | W5 | decrease(3) | despertado -> stock=2
+093 | W5 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+094 | W2 | decrease(3) | despertado -> stock=2
+095 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+096 | W4 | decrease(3) | entrando al monitor | stock=2
+097 | W4 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+098 | W3 | ciclo 3 | devuelve 3 recurso(s)
+099 | W3 | increase(3) | stock ahora=5 -> broadcast
+100 | W3 | ciclo 4 | pide 1 recurso(s)
+101 | W5 | decrease(3) | despertado -> stock=5
+102 | W5 | decrease(3) | OK -> stock restante=2
+103 | W4 | decrease(3) | despertado -> stock=2
+104 | W4 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+105 | W2 | decrease(3) | despertado -> stock=2
+106 | W2 | decrease(3) | SIN STOCK (hay 2) -> cond_wait
+107 | W1 | ciclo 3 | devuelve 3 recurso(s)
+108 | W3 | decrease(1) | entrando al monitor | stock=2
+109 | W3 | decrease(1) | OK -> stock restante=1
+110 | W1 | increase(3) | stock ahora=4 -> broadcast
+111 | W1 | ciclo 4 | pide 1 recurso(s)
+112 | W4 | decrease(3) | despertado -> stock=4
+113 | W4 | decrease(3) | OK -> stock restante=1
+114 | W2 | decrease(3) | despertado -> stock=1
+115 | W2 | decrease(3) | SIN STOCK (hay 1) -> cond_wait
+116 | W1 | decrease(1) | entrando al monitor | stock=1
+117 | W1 | decrease(1) | OK -> stock restante=0
+118 | W5 | ciclo 3 | devuelve 3 recurso(s)
+119 | W5 | increase(3) | stock ahora=3 -> broadcast
+120 | W5 | ciclo 4 | pide 1 recurso(s)
+121 | W2 | decrease(3) | despertado -> stock=3
+122 | W2 | decrease(3) | OK -> stock restante=0
+123 | W5 | decrease(1) | entrando al monitor | stock=0
+124 | W5 | decrease(1) | SIN STOCK (hay 0) -> cond_wait
+125 | W4 | ciclo 3 | devuelve 3 recurso(s)
+126 | W4 | increase(3) | stock ahora=3 -> broadcast
+127 | W4 | ciclo 4 | pide 1 recurso(s)
+128 | W5 | decrease(1) | despertado -> stock=3
+129 | W5 | decrease(1) | OK -> stock restante=2
+130 | W4 | decrease(1) | entrando al monitor | stock=2
+131 | W4 | decrease(1) | OK -> stock restante=1
+132 | W3 | ciclo 4 | devuelve 1 recurso(s)
+133 | W3 | increase(1) | stock ahora=2 -> broadcast
+134 | W3 | finalizado
+135 | W1 | ciclo 4 | devuelve 1 recurso(s)
+136 | W1 | increase(1) | stock ahora=3 -> broadcast
+137 | W1 | finalizado
+138 | W5 | ciclo 4 | devuelve 1 recurso(s)
+139 | W5 | increase(1) | stock ahora=4 -> broadcast
+140 | W5 | finalizado
+141 | W2 | ciclo 1 | devuelve 3 recurso(s)
+142 | W2 | increase(3) | stock ahora=7 -> broadcast
+143 | W2 | ciclo 2 | pide 2 recurso(s)
+144 | W2 | decrease(2) | entrando al monitor | stock=7
+145 | W2 | decrease(2) | OK -> stock restante=5
+146 | W4 | ciclo 4 | devuelve 1 recurso(s)
+147 | W4 | increase(1) | stock ahora=6 -> broadcast
+148 | W4 | finalizado
+149 | W2 | ciclo 2 | devuelve 2 recurso(s)
+150 | W2 | increase(2) | stock ahora=8 -> broadcast
+151 | W2 | ciclo 3 | pide 3 recurso(s)
+152 | W2 | decrease(3) | entrando al monitor | stock=8
+153 | W2 | decrease(3) | OK -> stock restante=5
+154 | W2 | ciclo 3 | devuelve 3 recurso(s)
+155 | W2 | increase(3) | stock ahora=8 -> broadcast
+156 | W2 | ciclo 4 | pide 1 recurso(s)
+157 | W2 | decrease(1) | entrando al monitor | stock=8
+158 | W2 | decrease(1) | OK -> stock restante=7
+159 | W2 | ciclo 4 | devuelve 1 recurso(s)
+160 | W2 | increase(1) | stock ahora=8 -> broadcast
+161 | W2 | finalizado
+162 | FIN
